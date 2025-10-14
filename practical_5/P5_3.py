@@ -67,3 +67,6 @@ SeqIO.write(gc_records, "dna_with_gc.fasta", "fasta")
 
 # - Translate each DNA sequence and print the first 10 amino acids.
 # - Read `dna_rc.fasta` back in and confirm IDs/descriptions look correct.
+
+for record in records:
+    print(record.seq.translate()[:10])
